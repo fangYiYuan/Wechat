@@ -1,0 +1,150 @@
+.head-css{
+  background-color: #3BAC56;
+  height: 250rpx;
+}
+.top-box{
+  display:flex;
+  margin:0 20px;
+  margin-top:-27%;
+}
+.topleft{
+  border-radius: 10rpx;
+  padding: 4rpx;
+  background: #fff;
+}
+.left-img{
+  width: 200rpx;
+  height: 296rpx;
+  border-radius: 8rpx;
+}
+.topright{
+  margin-left:36rpx;
+  font-size:24rpx;
+  letter-spacing: 2rpx;
+  width:68%;
+}
+.title-css{
+  color:#fff;
+  font-size: 40rpx;
+  font-weight:bold;
+  margin-top: 84rpx;
+  margin-bottom:20rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.genres-css{
+  /* color: #9D9D9D; */
+  color: #fff;
+}
+.time-css{
+  color:#9D9D9D;
+  margin-top:26rpx;
+}
+.pingjia-css{
+  margin-top: 10rpx;
+}
+.rat-css{
+  color: #ff9600;
+  font-size: 26rpx;
+}
+.navbox{
+  margin-top: 10rpx;
+  border-top: 10rpx solid #F5F5F5;
+  color: #56534A;
+  font-size: 30rpx;
+}
+.navtext{
+  margin: 0 20rpx;
+  padding-top: 20rpx;
+  display: inline-block;
+  letter-spacing: 2rpx;
+  line-height:52rpx;
+  text-indent: 4rpx;
+}
+.collect{
+  width: 70%;
+  margin: 20rpx auto;
+  border: 2rpx solid #3BAC56;
+  color: #3BAC56;
+  letter-spacing: 4rpx;
+  font-size:30rpx;
+}
+.viewml{
+  margin-left: 24rpx;
+}
+.scroll{
+  white-space: nowrap;
+  margin: 20rpx 0;
+}
+.img-icon{
+  width:150rpx;
+  height:214rpx;
+}
+.scrollview{
+  display: inline-block;
+  width: 150rpx;
+  text-align: center;
+  font-size: 26rpx;
+  margin-left: 24rpx;
+}
+.scrollview:nth-child(1){
+  margin-left: 0;
+}
+.scro-name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scro-job{
+  color: #777;
+  margin-top: 10rpx;
+}
+.talkbox{
+  margin: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+.talk-view{
+  border-bottom: 2rpx solid #dbdbdb;
+  padding: 10px 0;
+}
+.star-img{
+  width: 20rpx;
+  height: 20rpx;
+}
+.user-icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.user-name{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.talk-head{
+  display: flex;
+  margin: 20rpx 0 10rpx;
+}
+.user-info{
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.user-loc{
+  font-size: 24rpx;
+  margin-left: 4rpx;
+  color: #968d8d;
+}
+.user-rat{
+  color: #ff9600;
+  font-size: 28rpx;
+  margin-left: 12rpx;
+}
+.user-nav{
+  color: #56534A;
+  font-size: 30rpx;
+}
+.user-time{
+  color: #b1aea5;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}

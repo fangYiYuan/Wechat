@@ -1,0 +1,4 @@
+<view class='loading-css'>
+  <image class='gifload' src="../../imgs/icon-loading.gif"></image>
+  <view>loading...</view>
+</view>

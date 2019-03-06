@@ -1,0 +1,29 @@
+.film-item{
+  display: inline-block;
+  margin-left: 15rpx;
+  margin-bottom: 20rpx;
+  width: 200rpx;
+}
+.film-item:last-child{
+  margin-right: 10rpx;
+}
+.item-img{
+  width: 200rpx;
+  height: 285rpx;
+}
+.film-name{
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.star-img{
+  width: 20rpx;
+  height: 20rpx;
+}
+.rating-css{
+  font-size: 22rpx;
+  color: #525753;
+  margin-left: 16rpx;
+}

@@ -1,0 +1,10 @@
+.loading-css{
+  text-align: center;
+  font-size: 24rpx;
+  color: #afaaaa;
+  margin-top: 20rpx;
+}
+.gifload{
+  width: 120rpx;
+  height: 120rpx;
+}

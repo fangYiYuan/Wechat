@@ -1,0 +1,17 @@
+<view>
+  <view>
+    <loading wx:if="{{loading}}"></loading>
+    <block wx:if="{{!loading}}">
+      <view>
+        <view class='border8'></view>
+        <view class='title-css'>
+          <text class='textti'>{{title}}</text>
+        </view>
+        <view class='film-list'>
+          <film-item bindtap="loadDetail" data-filmId="{{item.id}}" wx:for="{{movieList}}" wx:key="index" filmList="{{item}}"></film-item>
+          <view wx:for="{{ 3 - (movieList.length % 3)}}" class='view-css-add' wx:key="i"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<view>
+  <view class='head-css'></view>
+  <view class='top-box'>
+    <view class='topleft'>
+      <image class='left-img' src="{{detailData.cover.image.small.url}}"></image>
+    </view>
+    <view class='topright'>
+      <view class="title-css">{{detailData.title}}</view>
+      <view class='genres-css'>{{mGenres}} / {{detailData.countries[0]}} / {{detailData.durations[0]}}</view>
+      <view class='time-css'>{{detailData.pubdate}} 上映</view>
+      <view class='pingjia-css'>
+        <text class='rat-css'>{{detailData.rating.value}}分</text>
+        <text> / {{detailData.comment_count}}人评价</text>
+      </view>
+    </view>
+  </view>
+  <view class='navbox'>
+    <view class='navtext'>{{detailData.intro}}</view>
+  </view>
+  <button class='collect' bindtap="collectBtn">收藏</button>
+  <view class='viewml'>
+    <block class="titleh1">演职人员</block>
+    <scroll-view class='scroll' scroll-x>
+      <view class='scrollview'>
+        <image class='img-icon' src='{{detailData.directors[0].cover_url}}'></image>
+        <view class='scro-name'>{{detailData.directors[0].name}}</view>
+        <view class='scro-job'>导演</view>
+      </view>
+      <view class='scrollview' wx:for='{{detailData.actors}}' wx:key="index">
+        <image class='img-icon' src="{{item.cover_url}}"></image>
+        <view class='scro-name'>{{item.name}}</view>
+        <view class='scro-job'>{{item.roles[0]}}</view>
+      </view>
+    </scroll-view>
+    <block class="titleh1">评论</block>
+  </view>
+  <view class='talkbox'>
+    <view>
+      <view wx:for='{{talkList}}' wx:key="index" class='talk-view' wx:for-item="talkItem">
+        <view class='talk-head'>
+          <image class='user-icon' src="{{talkItem.user.avatar}}"></image>
+          <view class='user-info'>
+            <text class='user-name'>{{talkItem.user.name}}</text>
+            <text class='user-loc' wx:if="{{talkItem.user.loc.name}}">({{talkItem.user.loc.name}})</text>
+            <view>
+              <block wx:for="{{5}}" wx:key="index">
+                <image class='star-img' wx:if="{{(index + 1) <= talkItem.rating.value}}" src="../../imgs/star-open.png"></image>
+                <image class='star-img' wx:if="{{(index + 1) > talkItem.rating.value}}" src="../../imgs/star-close.png"></image>
+              </block>
+              <text class="user-rat" wx:if="{{talkItem.rating.value}}">{{talkItem.rating.value}}.0 分</text>
+            </view>
+          </view>
+        </view>
+        <view class='user-nav'>{{talkItem.comment}}</view>
+        <view class='user-time'>{{talkItem.create_time}}</view>
+      </view>
+    </view>
+    <loading wx:if="{{loading}}"></loading>
+  </view>
+</view>

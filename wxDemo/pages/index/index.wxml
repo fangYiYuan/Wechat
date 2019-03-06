@@ -1,0 +1,19 @@
+<view>
+  <view>
+    <loading wx:if="{{loading}}"></loading>
+    <block wx:if="{{!loading}}">
+      <view wx:for="{{movieList}}" wx:key="i" wx:for-item="titleItem" wx:for-index="i">
+        <view class='border8'></view>
+        <view class='title-css'>
+          <text class='textti'>{{titleItem.title}}</text>
+          <text bindtap="loadMore" data-func="{{titleItem.func}}"  class='textmore'>更多</text>
+        </view>
+        <view>
+          <scroll-view scroll-x	class='film-list'>
+            <film-item bindtap="loadDetail" data-filmId="{{filmList.id}}" wx:for="{{titleItem.list}}" wx:for-item="filmList" wx:key="index" filmList="{{filmList}}"></film-item>
+          </scroll-view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

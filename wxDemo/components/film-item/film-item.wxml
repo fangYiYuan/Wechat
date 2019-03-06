@@ -1,0 +1,12 @@
+<view class='film-item'>
+  <image class='item-img' src='{{filmList.cover.url}}'></image>
+  <view class='film-name'>{{filmList.title}}</view>
+  <view>
+    <block wx:for='{{5}}' wx:key="index">
+      <image class='star-img' wx:if="{{ (index + 1) *2 <= filmList.rating.value }}" src="../../imgs/star-open.png"></image>
+      <image class='star-img' wx:if="{{ (index + 1) *2 > filmList.rating.value }}" src="../../imgs/star-close.png"></image>
+    </block>
+    <text class='rating-css'>{{filmList.rating.value}}</text>
+    <text wx:if="{{!filmList.rating}}" class='rating-css'>暂无评分</text>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+.title-css{
+  font-size: 26rpx;
+  border-left: 6rpx solid #3BAC56;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin: 20rpx 10rpx 20rpx 4rpx;
+  overflow: hidden;
+}
+.border8{
+  border: 8rpx solid #F8F5F8;
+}
+.textti{
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+.textmore{
+  float: right;
+  color: #3BAC56;
+}
+.film-list{
+  white-space: nowrap;
+}

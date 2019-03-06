@@ -1,0 +1,23 @@
+<view>
+  <view class='head-css'>
+    <image class='user-icon' src="{{userInfo.avatarUrl || '../../imgs/user-icon.png'}}"></image>
+    <view wx:if="{{userInfo}}" >{{userInfo.nickName}}</view>
+    <!-- <view class='btn-css'>点击授权登录</view> -->
+    <button wx:if="{{!userInfo}}" class='btn-css' open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权登录</button>
+  </view>
+  <view class='colbox'>
+    <view class="titleco">我的收藏</view>
+    <view class='film-list'>
+      <view class='film-item' wx:for="{{collectList}}" wx:for-item="filmList" wx:key="index" >
+        <image class='item-img' bindtap="loadDetail" data-filmId="{{filmList.id}}" src='{{filmList.cover.image.small.url}}'></image>
+        <view class='film-name'>{{filmList.title}}</view>
+        <view class='cancel' bindtap="cancelBtn" data-filmId="{{filmList.id}}">取消</view>
+      </view>
+      <view class='view-css-add' wx:for="{{3 - (size * 3)}}" wx:key="index"></view>
+    </view>
+    <view wx:if="{{size === 0}}" class='nocil'>
+      <image class='icon-clo' src="../../imgs/collect.png"></image>
+      <view>您暂时没有收藏的电影哦！</view>
+    </view>
+  </view>
+</view>
